@@ -1,0 +1,105 @@
+@import susy
+@import bourbon
+@import octicons
+@import font-awesome
+
+// GRID
+$susy: (columns: 8, column-width: 64px, gutters: 16px/64px, math: static)
+
+// VARIABLES
+$selection-color: pink
+
+// GLOBAL
+::-moz-selection
+	background: $selection-color
+
+::selection
+	background: $selection-color
+
+a
+	color: blue
+	text-decoration: none
+
+img
+	display: block
+
+li
+	list-style: none
+
+ul
+	margin: 0
+	padding: 0
+
+// GRID
+.container
+	@include container
+
+.post
+	background: rgba(255,255,255,0.95)
+	min-height: 1000px
+
+// LAYOUTS
+body
+	background: asset-url("banksy.jpg") no-repeat center center fixed
+	background-size: cover
+	color: black
+	font-family: $monospace
+	-webkit-font-smoothing: antialiased
+
+.header
+	background: #333
+	ul
+		display: inline-block
+		li
+			display: inline-block
+			a
+				color: white
+				display: block
+				line-height: 32px
+				font-family: "aw-conqueror-carved-one"
+	ul.actions
+		float: right
+		li
+			a
+				box-shadow: inset 1px 0 0 rgba(255,255,255,0.25)
+				text-align: center
+				width: 48px
+		li.email
+			a
+				background: #444
+		li.facebook
+			a
+				background: #3B5998
+		li.twitter
+			a
+				background: #4099FF
+
+.logo
+	color: white
+	font-family: "aw-conqueror-carved-one"
+
+.tabs
+	ul
+		li
+			display: inline-block
+			a
+				color: #999
+				display: block
+				font-family: "aw-conqueror-carved-one"
+				line-height: 16px * 4
+				margin-right: 16px * 2
+		li.active
+			a
+				color: #FF3366
+
+// BUCKET LIST
+.bucket-list
+	ul
+		li
+			line-height: 16px * 2
+			&:before
+				content: "\f096\00a0\00a0"
+				font-family: "FontAwesome"
+		li.checked
+			&:before
+				content: "\f046\00a0\00a0"

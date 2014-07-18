@@ -1,0 +1,11 @@
+.tabs
+	ul
+		li class=('active' if current_page? root_path)
+			= link_to root_path do
+				| Intro
+		li class=('active' if current_page? "false")
+			= link_to root_path do
+				| Projects
+		li class=('active' if current_page? bucket_list_path)
+			= link_to bucket_list_path do
+				| Bucket List
